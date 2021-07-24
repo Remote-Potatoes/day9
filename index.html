@@ -5,31 +5,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="Timer.js"></script>
-    <script src="main.js"></script>
+
+    <style>
+      .input-container {
+        display: flex;
+      }
+      input {
+        width: 100%;
+      }
+
+      .on {
+        background-color: green;
+      }
+
+      .off {
+        background-color: red;
+      }
+
+      .btn {
+        background-color: blue;
+        color: white;
+      }
+    </style>
   </head>
   <body>
     <h1>Timer</h1>
 
     <span class="time"></span>
     <br />
-    <input
-      type="number"
-      class="minutes"
-      placeholder="Choose your minutes"
-      max="10"
-      min="0"
-    />
-    <input
-      type="number"
-      class="seconds"
-      placeholder="Choose your seconds"
-      max="60"
-      min="0"
-    />
+    <div class="input-container">
+      <input
+        type="number"
+        class="minutes"
+        placeholder="Choose your minutes"
+        max="10"
+        min="0"
+      />
+      <input
+        type="number"
+        class="seconds"
+        placeholder="Choose your seconds"
+        max="60"
+        min="0"
+      />
+    </div>
 
-    <button>START</button>
-    <button>PAUSE</button>
-    <button>CLEAR</button>
+    <button class="start-pause on">START DYNAMIC</button>
+    <button class="start-btn">START</button>
+    <button class="pause-btn">PAUSE</button>
+    <button class="stop-btn">CLEAR</button>
+    <script src="Timer.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
